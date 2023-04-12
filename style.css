@@ -129,23 +129,23 @@ h2{
     font-style: italic;
     color: var(--Off-black);
 }
-#line{
-    display: inline-block;
+ #line{
+    overflow: visible;
     width: 100%;
     border-top: 1px solid var(--Light-grey);
-    padding:0;
+        
 }
 button{
     position: relative;
+    top: -30px;
+    display: flex;
+    align-items: center;
     border: none;
     background-color: var(--Purple);
     cursor: pointer;
     border-radius: 50%;
-    display: flex;
-    align-items:center;
     padding: 3px;
     margin: auto;
-    top: -22px;
 }
 button:hover {
     background-color: var(--Off-black);
@@ -168,7 +168,7 @@ button:hover {
     color: hsl(228, 45%, 44%); 
 }
 
- @media screen and (min-width:450px) {
+ @media screen and (min-width:600px) {
     .wrapper{
         background-color: var(--Off-white);
         width: 90%;
@@ -191,8 +191,9 @@ button:hover {
         height: 60px;
     }
     button{
-        left: 270px;
+        float: right;
     }
+    
 }
 
 @media (min-width:1097px){
@@ -211,10 +212,6 @@ button:hover {
         margin: auto;
         margin-top: 3rem;
         box-shadow: 0 0 6px var(--Smokey-grey);
-    }
-    button{
-        left: 330px;
-        top: -25px;
     }
     .fa-solid{
         font-size: 40px;
