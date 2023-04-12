@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form id="form" action="/" method="get">
+            <h1>myAge Calculator</h1>
+            <p>Enter your birth day, month and year below to calculate your present age.</p>
+            <div class="inputfield">
+                <div class="flexinput">
+                    <label for="day">DAY</label>
+                    <input id="day" name="day" type="text" placeholder="DD" minlength="2" maxlength="2">
+                    <p class="error"></p>
+                </div>
+                <div class="flexinput">
+                    <label for="month">MONTH</label>
+                    <input id="month" name="month" type="text" placeholder="MM" minlength="2" maxlength="2">
+                    <p class="error"></p>
+                </div>
+                <div class="flexinput">
+                    <label for="year">YEAR</label>
+                    <input id="year" name="year" type="text" placeholder="YYYY" minlength="4" maxlength="4">
+                    <p class="error"></p>
+                </div>
+            </div>
+            <div id="line">
+                <button type="submit"><i class="fa-solid fa-arrow-down"></i></button>
+            </div>
+
+            <div class="output">
+                <div class="calculated one">
+                    <span id="output-y">- - </span>
+                    <h2>Years</h2>
+                </div>
+                <div class="calculated">
+                    <span id="output-m">- - </span>
+                    <h2>months</h2>
+                </div>
+                <div class="calculated">
+                    <span id="output-d">- - </span>
+                    <h2>days</h2>
+                </div>
+            </div>
+            <div class="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+                Coded by <a href="https://github.com/BettyAfolabi">Betty Afolabi</a>.
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

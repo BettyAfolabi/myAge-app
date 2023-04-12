@@ -1,0 +1,226 @@
+:root{
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+    --font: 'Poppins', sans-serif;
+
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+body{
+    font-size: 16px;
+    font-family: var(--font);
+    background-color: var(--Light-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1, h2{
+    margin: 0 ;
+}
+form{
+    background-color: var(--White);
+    width: 93%;
+    padding: 1.5rem 1rem;
+    border-radius: 20px;
+    border-bottom-right-radius: 80px;
+    margin: auto;
+    margin-bottom: 5rem;
+    box-shadow: 0 0 6px var(--Smokey-grey);
+}
+h1{
+    color: var(--Purple);
+    font-size: 32px;
+    weight: 700;
+}
+p{
+    color: var(--Off-black);
+    font-size: 16px;
+    weight: 400;
+    padding: 0 10px;
+}
+.inputfield{
+    display: flex;
+    flex-flow:row nowrap;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+    min-height: 120px;
+    margin-bottom: 1.5rem;
+}
+.flexinput{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 10px;
+}
+label{
+    color: var(--Smokey-grey);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding-bottom: 3px;
+    padding-left: 4px;
+}
+input{
+    width: 80px;
+    height: 50px;
+    color: var(--Off-black);
+    cursor: pointer;
+    border: 1px solid var(--Light-grey);
+    display: block;
+    outline: none;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+input:focus{
+    border: 1px solid var(--Purple);
+}
+.success input{
+    border-color: var(--Purple);
+}
+.error label{
+    color: var(--Light-red);
+}
+.error input{
+    border: 1px solid var(--Light-red);
+}
+.error{
+    display: block;
+    color: var(--Light-red);
+    font-size: 12px;
+    padding-left: 0; 
+}
+.calculated{
+    display: flex;
+    flex-flow: row nowrap;
+    padding-left: 10px;
+    align-items: center;
+}
+.one{
+    margin-top: 10px;
+}
+.calculated span{
+    color: var(--Purple);
+    font-weight: 800;
+    font-size: 40px;
+    font-style: italic;
+}
+h2{
+    padding-left: 5px;
+    font-size: 40px;
+    font-weight: 800;
+    font-style: italic;
+    color: var(--Off-black);
+}
+#line{
+    display: inline-block;
+    width: 100%;
+    border-top: 1px solid var(--Light-grey);
+    padding:0;
+}
+button{
+    position: relative;
+    border: none;
+    background-color: var(--Purple);
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items:center;
+    padding: 3px;
+    margin: auto;
+    top: -22px;
+}
+button:hover {
+    background-color: var(--Off-black);
+}
+.fa-solid{
+    color:var(--Off-white);
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    padding-top: 10px;
+}
+.attribution { 
+    margin-top: 1.5rem;
+    padding: 5px 0;
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+ @media screen and (min-width:450px) {
+    .wrapper{
+        background-color: var(--Off-white);
+        width: 90%;
+        height: 90%;
+        padding: 2rem;
+        box-shadow: 0 0 10px #3d3d3d;
+    }
+    form{
+        width: 70%;
+        height: max-content;
+        margin-top: 3rem;
+        border-bottom-right-radius: 90px;
+        box-shadow: none;
+    }
+    h1{
+        text-align: center;
+    }
+    input{
+        width: 70%;
+        height: 60px;
+    }
+    button{
+        left: 270px;
+    }
+}
+
+@media (min-width:1097px){
+    .wrapper{
+        background-color: var(--Light-grey);
+        width: 93%;
+        padding: 2rem;
+        box-shadow: none;
+    }
+    form{
+        background-color: var(--White);
+        width: 50%;
+        padding: 1.5rem 1rem;
+        border-radius: 20px;
+        border-bottom-right-radius: 80px;
+        margin: auto;
+        margin-top: 3rem;
+        box-shadow: 0 0 6px var(--Smokey-grey);
+    }
+    button{
+        left: 330px;
+        top: -25px;
+    }
+    .fa-solid{
+        font-size: 40px;
+        width: 60px;
+        height: 60px;
+        padding-top: 5px;
+    }
+}
+
