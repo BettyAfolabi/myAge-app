@@ -58,12 +58,16 @@
                 setError(d3, "This field is required");
             }else if(d3Value >= 32 || d3Value < 1){
                 setError(d3, 'Enter a valid date');
-            }else if (m3Value == 04 || m3Value == 06 || m3Value == 09 || m3Value == 11 && d3Value > 30) {
+                return;
+            }else if ((m3Value == 04 || m3Value == 06 || m3Value == 09 || m3Value == 11) && d3Value > 30) {
                 setError(d3, 'There are 30 days in this month');
-            }else if (m3Value == 02 && y3Value % 4 == 0 && d3Value > 29 ) {
+                return;
+            }else if ((m3Value == 02 && y3Value % 4 == 0) && d3Value > 29 ) {
                 setError(d3, 'There are 29 days in this month');
-            }else if (m3Value == 02 &&  y3Value % 100 != 0 && d3Value > 28) {
+                return;
+            }else if ((m3Value == 02 &&  y3Value % 100 != 0) && d3Value > 28) {
                 setError(d3, 'There are 28 days in this month');
+                return;
             }else{
                 setSuccess(d3);
             };
@@ -72,14 +76,17 @@
                 setError(m3, "This field is required");
             }else if (m3Value < 1 || m3Value >= 13) {
                 setError(m3, 'Enter a valid month');
+                return;
             }else{
                 setSuccess(m3);
             }
     
             if (y3Value === ''){
                 setError(y3, "This field is required");
+                return;
             }else if (y3Value > y2){
                 setError(y3, 'Must be in the past');
+                return;
             }else{
                 setSuccess(y3);
             }
@@ -91,36 +98,36 @@
     
         validateInputs();    
     
-        // let monthCount = setInterval(monthc, 10);          
-        // let daysCount = setInterval(days, 10);
-        // let yearCount = setInterval(yearc, 10);
-        // let count1 = 0;
-        // let count2 = 0;
-        // let count3 = 0;
+        let monthCount = setInterval(monthc, 10);          
+        let daysCount = setInterval(days, 10);
+        let yearCount = setInterval(yearc, 10);
+        let count1 = 1;
+        let count2 = 1;
+        let count3 = 1;
         
-        // function monthc () {
-        //     count1++;
-        //     document.getElementById('output-m').innerHTML= count1;
-        //     if (count1 == m) {
-        //         clearInterval(monthCount);
-        //     }
-        // }
+        function monthc () {
+            count1++;
+            document.getElementById('output-m').innerHTML= count1;
+            if (count1 == m) {
+                clearInterval(monthCount);
+            }
+            
+        }
     
-        // function days () {
-        //     count2++;
-        //     document.getElementById('output-d').innerHTML= count2;
-        //     if (count2 == d) {
-        //         clearInterval(daysCount);
-        //     }
-        // }
+        function days () {
+            count2++;
+            document.getElementById('output-d').innerHTML= count2;
+            if (count2 == d) {
+                clearInterval(daysCount);
+            }
+        }
     
-        // function yearc () {
-        //     count3++;
-        //     document.getElementById('output-y').innerHTML= count3;
-        //     if (count3 == y) {
-        //         clearInterval(yearCount);
-        //     }
-        // }
-    
+        function yearc () {
+            count3++;
+            document.getElementById('output-y').innerHTML= count3;
+            if (count3 == y) {
+                clearInterval(yearCount);
+            }
+        }
     });    
     
