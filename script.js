@@ -1,12 +1,11 @@
-
-    const d1 = document.getElementById('day').value;
-    const m1 = document.getElementById('month').value;
-    const y1 = document.getElementById('year').value;
     const form = document.getElementById('form');
 
-   
     form.addEventListener('submit', e => {
         e.preventDefault();
+
+        const d1 = document.getElementById('day').value;
+        const m1 = document.getElementById('month').value;
+        const y1 = document.getElementById('year').value;
     
         const day = new Date();
         let d2 = day.getDate();
@@ -94,40 +93,44 @@
             document.getElementById('output-d').innerHTML = d;
             document.getElementById('output-m').innerHTML = m;
             document.getElementById('output-y').innerHTML = y;
+
+            let monthCount =setInterval(monthc, 10);          
+            let daysCount = setInterval(days, 10);
+            let yearCount = setInterval(yearc, 10);
+            
+            let count1 = 0;
+            let count2 = 0;
+            let count3 = 0;
+            
+            
+            function monthc () {
+                document.getElementById('output-m').innerHTML= count1;
+                if (count1 == m) {
+                    clearInterval(monthCount);
+                }else{
+                    count1++;
+                }
+            }
+        
+            function days () {
+                document.getElementById('output-d').innerHTML= count2;
+                if (count2 == d) {
+                    clearInterval(daysCount);
+                }else{
+                    count2++;
+                }
+            }
+        
+            function yearc () {
+                document.getElementById('output-y').innerHTML = count3;
+                if (count3 == y) {
+                    clearInterval(yearCount);
+                }else{
+                    count3++;
+                }
+            }
         }
     
         validateInputs();    
-    
-        let monthCount = setInterval(monthc, 10);          
-        let daysCount = setInterval(days, 10);
-        let yearCount = setInterval(yearc, 10);
-        let count1 = 1;
-        let count2 = 1;
-        let count3 = 1;
-        
-        function monthc () {
-            count1++;
-            document.getElementById('output-m').innerHTML= count1;
-            if (count1 == m) {
-                clearInterval(monthCount);
-            }
-            
-        }
-    
-        function days () {
-            count2++;
-            document.getElementById('output-d').innerHTML= count2;
-            if (count2 == d) {
-                clearInterval(daysCount);
-            }
-        }
-    
-        function yearc () {
-            count3++;
-            document.getElementById('output-y').innerHTML= count3;
-            if (count3 == y) {
-                clearInterval(yearCount);
-            }
-        }
     });    
     
