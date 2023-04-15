@@ -4,8 +4,8 @@ This is a solution to the [Age Calculator app by Frontend mentor](https://www.fr
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/BettyAfolabi/myAge-app)
-- Live Site URL: [Add live site URL here](https://myageapp.netlify.app/)
+- Solution URL: [solution URL](https://github.com/BettyAfolabi/myAge-app)
+- Live Site URL: [myAge-app](https://myageapp.netlify.app/)
 
 ### Built with
 
@@ -21,7 +21,7 @@ JavaScript date validation and JavaScript animation
 
 ## Author
 
-- Website - [BettyAfolabi](https://linkedin.com/in/elizabeth)
+- Website - [Elizabeth Afolabi](https://www.linkedin.com/in/elizabeth-afolabi-2a6511196/)
 - Frontend Mentor - [@Betty](https://www.frontendmentor.io/profile/Betty)
 - Twitter - [@devduchess](https://www.twitter.com/devduchess)
  
